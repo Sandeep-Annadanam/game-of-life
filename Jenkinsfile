@@ -1,12 +1,21 @@
-node {
-	stage('SCM') {
-	git https://github.com/Sandeep-Annadanam/game-of-life.git
-	}
+pipeline {
+    agent any
 
-	stage('build the packages') {
-		sh 'mvn package'
-	}
-stage('archival') {
-archive 'target/*.jar'
-	}
-      }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
