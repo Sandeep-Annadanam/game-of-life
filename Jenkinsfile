@@ -1,4 +1,4 @@
-node {
+node ('MAVEN'){
     stage("SCM"){
         git 'https://github.com/Sandeep-Annadanam/game-of-life.git'
     }
