@@ -1,6 +1,6 @@
 node ('MAVEN'){
     stage("SCM"){
-        git branch: 'main', url: 'https://github.com/spring-projects/spring-petclinic.git'
+        git 'https://github.com/Sandeep-Annadanam/game-of-life.git'
     }
     stage('CLEAN PACKAGE'){
         sh 'mvn clean'
